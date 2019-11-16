@@ -1,0 +1,101 @@
+$width: 50px;
+
+.root-container {
+  margin: 30px auto;
+  padding: 10px 0 0;
+  box-sizing: border-box;
+
+  form {
+    margin-bottom: 20px;
+    width: 200px;
+    margin: auto;
+
+    label {
+      text-align: left;
+      color: white;
+      font-weight: 600;
+    }
+
+    input {
+      margin-top: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      border: 2px solid #0984e3;
+      height: 40px;
+      padding: 0 10px;
+      outline: none;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      height: 40px;
+      width: 100%;
+      border: 2px solid #0984e3;
+      box-sizing: border-box;
+      background: #0984e3;
+      color: white;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      margin: 0;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .error-message {
+      color: #ff7675;
+      margin: 15px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  .pacman-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20px;
+
+    .row {
+      display: flex;
+      background: #2d3436;
+  
+      .cell {
+        width: $width;
+        height: $width;
+        box-sizing: border-box;
+        border: 3px solid #2d3436;
+  
+        &.brick {
+          background: #0984e3;
+        }
+  
+        &.space {
+          background: #2d3436;
+        }
+      }
+    }
+  
+    .pacman {
+      width: $width;
+      height: $width;
+      box-sizing: border-box;
+      background-size: cover;
+      background-size: 100% 100%;
+      background-image: url("https://cdn0.iconfinder.com/data/icons/shift-free/32/Pacman-512.png");
+  
+      &.up {
+        transform: rotate(-90deg);
+      }
+  
+      &.down {
+        transform: rotate(90deg);
+      }
+  
+      &.left {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
